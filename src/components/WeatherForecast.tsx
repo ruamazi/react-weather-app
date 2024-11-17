@@ -49,7 +49,7 @@ const WeatherForecast = ({ data }: WeatherForecastProps) => {
         <CardTitle>5-Day Forecast</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-4">
+        <div className="flex flex-col gap-3">
           {nextDays.map((day) => (
             <div
               key={day.date}
@@ -75,7 +75,7 @@ const WeatherForecast = ({ data }: WeatherForecastProps) => {
                 </span>
               </div>
 
-              <div className="flex justify-end gap-4 ">
+              <div className="md:flex justify-end gap-4 sm:hidden">
                 <span className="flex items-center gap-1">
                   <Droplets className="h-4 w-4 text-blue-500" />
                   <span className="text-sm">{day.humidity}%</span>
